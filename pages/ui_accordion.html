@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang='kr' id="headers">
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Refactoring</title>
+  <!-- favicon -->
+  <link rel="icon" href="/admin_cdn/img/impactsoft.ico" type="image/x-icon">
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel='stylesheet' href='/admin_cdn/css/common/reset.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/core.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/layout.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/component/style.css' />
+  <!-- box-icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- slick.css -->
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#nav").load("/pages/common/nav.html");  //헤더 인클루드
+      $("#aside").load("/pages/common/aside.html");  //헤더 인클루드
+      $("#footer_nav").load("/pages/common/footer_nav.html");  //푸터부분 인클루드
+    }
+    );
+  </script>
+</head>
+<body>
+
+  <header id="nav"></header><!-- /#header -->
+  <aside id="aside" class='aside'></aside><!-- /#aside -->
+  <!-- 
+    아코디언 사용시 주의사항
+    - 아코디언을 다른 페이지에 긁어서 복사 할 시 id랑 a태그에 있는 네임명 바꾸기
+
+    아코디언 코드 사용법
+    - 아래 <div class='panel_group'> … </div> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+  -->
+  <div class='container'>
+    <div class='container_in'>
+      <h4 class='mb_3'>UI 요소/ 아코디언 </h4>
+      <div class='row mb_5'>
+        <div class='col_xl_6 mb_4'>
+          <h6 class='mb_2'>기본 아코디언</h6>
+          <div class='panel_group' id='acc_basic_arrow'>
+            <div class='panel'>
+              <div class='panel_heading'>
+                <a class='arrow' data-toggle='collapse' data-parent='#acc_basic_arrow' href='#acc_basic_arrow01'>
+                  <h4 class='panel_title'>아코디언 항목 1</h4>
+                </a>
+              </div>
+              <div id='acc_basic_arrow01' class='panel_collapse collapse in'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+            <div class='panel'>
+              <div class='panel_heading'>
+                <a class='arrow' data-toggle='collapse' data-parent='#acc_basic_arrow' href='#acc_basic_arrow02'>
+                <h4 class='panel_title'>아코디언 항목 2</h4>
+                </a>
+              </div>
+              <div id='acc_basic_arrow02' class='panel_collapse collapse'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+            <div class='panel'>
+              <div class='panel_heading'>
+                <a class='arrow' data-toggle='collapse' data-parent='#acc_basic_arrow' href='#acc_basic_arrow03'>
+                <h4 class='panel_title'>아코디언 항목 3</h4>
+                </a>
+              </div>
+              <div id='acc_basic_arrow03' class='panel_collapse collapse'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+          </div><!-- /.panel_group & 기본 아코디언 -->
+        </div>
+
+        <div class='col_xl_6 mb_4'>
+          <h6 class='mb_2'>화살없는 아코디언</h6>
+          <div class='panel_group' id='acc_basic'>
+            <div class='panel'>
+              <div class='panel_heading'>
+                <a data-toggle='collapse' data-parent='#acc_basic' href='#acc_basic01'>
+                  <h4 class='panel_title'>화살표없는 아코디언 항목 1</h4>
+                </a>
+              </div>
+              <div id='acc_basic01' class='panel_collapse collapse in'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+            <div class='panel'>
+              <div class='panel_heading'>
+                <a data-toggle='collapse' data-parent='#acc_basic' href='#acc_basic02'>
+                <h4 class='panel_title'>화살표없는 아코디언 항목 2</h4>
+                </a>
+              </div>
+              <div id='acc_basic02' class='panel_collapse collapse'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+            <div class='panel'>
+              <div class='panel_heading'>
+                <a data-toggle='collapse' data-parent='#acc_basic' href='#acc_basic03'>
+                <h4 class='panel_title'>화살표없는 아코디언 항목 3</h4>
+                </a>
+              </div>
+              <div id='acc_basic03' class='panel_collapse collapse'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+          </div><!-- /.panel_group & 화살없는 아코디언 -->
+        </div>
+      </div><!-- /.row -->
+
+      <div class='row mb_5'>
+        <div class='col_xl_6 mb_4'>
+          <h6 class='mb_2'>아이콘 헤더 아코디언</h6>
+          <div class='panel_group' id='acc_icon_header'>
+            <div class='panel'>
+              <div class='panel_heading'>
+                <a class='arrow' data-toggle='collapse' data-parent='#acc_icon_header' href='#acc_icon_header01'>
+                <i class='bx bx-bar-chart-alt-2 mr_2'></i><h4 class='panel_title'>헤더 옵션 1</h4>
+                </a>
+              </div>
+              <div id='acc_icon_header01' class='panel_collapse collapse in'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+            <div class='panel'>
+              <div class='panel_heading'>
+                <a class='arrow' data-toggle='collapse' data-parent='#acc_icon_header' href='#acc_icon_header02'>
+                <i class='bx bx-gift mr_2'></i>
+                <h4 class='panel_title'>헤더 옵션 2</h4>
+                </a>
+              </div>
+              <div id='acc_icon_header02' class='panel_collapse collapse'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+            <div class='panel'>
+              <div class='panel_heading'>
+                <a class='arrow' data-toggle='collapse' data-parent='#acc_icon_header' href='#acc_icon_header03'>
+                <i class='bx bx-briefcase mr_2'></i>
+                <h4 class='panel_title'>헤더 옵션 3</h4>
+                </a>
+              </div>
+              <div id='acc_icon_header03' class='panel_collapse collapse'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+          </div><!-- /.panel_group & 아이콘 헤더 아코디언-->
+        </div>
+
+        <div class='col_xl_6 mb_4'>
+          <h6 class='mb_2'>컬러 헤더 아코디언</h6>
+          <div class='panel_group' id='acc_color_header'>
+            <div class='panel panel_color_heading'>
+              <div class='panel_heading'>
+                <a class='arrow' data-toggle='collapse' data-parent='#acc_color_header' href='#acc_color_header01'>
+                <h4 class='panel_title'>헤더 옵션 1</h4>
+                </a>
+              </div>
+              <div id='acc_color_header01' class='panel_collapse collapse in'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+            <div class='panel panel_color_heading'>
+              <div class='panel_heading'>
+                <a class='arrow' data-toggle='collapse' data-parent='#acc_color_header' href='#acc_color_header02'>
+                <h4 class='panel_title'>헤더 옵션 2</h4>
+                </a>
+              </div>
+              <div id='acc_color_header02' class='panel_collapse collapse'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+            <div class='panel panel_color_heading'>
+              <div class='panel_heading'>
+                <a class='arrow' data-toggle='collapse' data-parent='#acc_color_header' href='#acc_color_header03'>
+                <h4 class='panel_title'>헤더 옵션 3</h4>
+                </a>
+              </div>
+              <div id='acc_color_header03' class='panel_collapse collapse'>
+                <div class='panel_body'>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div>
+            </div>
+          </div><!-- /.panel_group & 컬러 헤더 아코디언-->
+        </div>
+      </div><!-- /.row -->
+
+    </div><!-- /.container_in -->
+  </div><!-- /.containerr -->
+  
+  <div id="footer_nav"></div><!-- /#footer_nav -->
+  
+  <div class='layout_overlay'></div><!-- /.layout_overlay -->
+
+  <div id='loding_wrap'>
+    <div id='loding_spinner' class='d_none loding_spinner_position loding_spinner spinner_border text_light'
+      role='status'>
+      <span class='visually_hidden'>Loading...</span>
+    </div>
+  </div><!-- /#loding_wrap -->
+  
+</body>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+<script defer="defer" src='/admin_cdn/js/common/common.js'></script>
+<script src='/admin_cdn/js/common/document.js'></script>
+<script src='/admin_cdn/js/common/boot.js'></script>
+<!-- slick slider -->
+<script src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+<script src='/admin_cdn/js/common/slick.js'></script>
+
+</html>
+

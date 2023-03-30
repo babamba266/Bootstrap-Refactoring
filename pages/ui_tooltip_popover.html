@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang='kr' id="headers">
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Refactoring</title>
+  <!-- favicon -->
+  <link rel="icon" href="/admin_cdn/img/impactsoft.ico" type="image/x-icon">
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel='stylesheet' href='/admin_cdn/css/common/reset.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/core.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/layout.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/component/style.css' />
+  <!-- box-icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- slick.css -->
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#nav").load("/pages/common/nav.html");  //헤더 인클루드
+      $("#aside").load("/pages/common/aside.html");  //헤더 인클루드
+      $("#footer_nav").load("/pages/common/footer_nav.html");  //푸터부분 인클루드
+    }
+    );
+  </script>
+</head>
+<body>
+
+  <header id="nav"></header><!-- /#header -->
+  <aside id="aside" class='aside'></aside><!-- /#aside -->
+
+  <!-- 
+    툴팁 & 팝오버 코드 사용법
+    - 툴팁은 아래 <button … data-toggle='tooltip'> … </button> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+    - 팝오버는 아래 <button … data-toggle='popover'> … </button> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+  -->
+  <div class='container'>
+    <div class='container_in'>
+
+      <h4 class='mb_3'>UI 요소/ 툴팁 & 팝오버 </h4>
+      <div class='row mb_5'>
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>툴팁</h5>
+            <div class='card_body'>
+              <div class='small fw_semibold'>기본</div>
+              <div>
+                <button class='btn btn_primary' data-toggle='tooltip' data-placement='left' title='왼쪽'>left</button>
+                <button class='btn btn_primary' data-toggle='tooltip' data-placement='top' title='위'>top</button>
+                <button class='btn btn_primary' data-toggle='tooltip' data-placement='right' title='오른쪽'>right</button>
+                <button class='btn btn_primary' data-toggle='tooltip' data-placement='bottom' title='아래'>bottom</button>
+              </div>
+            </div>
+            <hr class='m_0'>
+            <div class='card_body'>
+              <div class='small fw_semibold'>버튼이랑 툴팁동일한 색상</div>
+              <div>
+                <button class='btn btn_primary' data-toggle='tooltip' data-placement='top' title='위' data-custom-class='tooltip_primary'>primary</button>
+                <button class='btn btn_secondary' data-toggle='tooltip' data-placement='top' title='위' data-custom-class='tooltip_secondary'>secondary</button>
+                <button class='btn btn_success' data-toggle='tooltip' data-placement='top' title='위' data-custom-class='tooltip_success'>success</button>
+                <button class='btn btn_danger' data-toggle='tooltip' data-placement='top' title='위' data-custom-class='tooltip_danger'>danger</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='col_xl_6'>
+          <div class='card'>
+            <h5 class='card_header'>팝오버</h5>
+            <div class='card_body'>
+              <div class='small fw_semibold'>기본</div>
+              <button type='button' class='btn btn_primary text_nowrap' data-toggle='popover' data-offset='0,14' data-placement='right' data-html='true' data-content="<p>This is a very beautiful popover, show some love.</div>">
+              오른쪽의 팝오버
+              </button>
+              <button type='button' class='btn btn_primary text_nowrap' data-toggle='popover' data-offset='0,14' data-placement='top' data-html='true' data-content="<p>This is a very beautiful popover, show some love.</div>">
+              상단에 팝오버
+              </button>
+              <button type='button' class='btn btn_primary text_nowrap' data-toggle='popover' data-offset='0,14' data-placement='bottom' data-html='true' data-content="<p>This is a very beautiful popover, show some love.</div>">
+              하단의 팝오버
+              </button>
+              <button type='button' class='btn btn_primary text_nowrap' data-toggle='popover' data-offset='0,14' data-placement='left' data-html='true' data-content="<p>This is a very beautiful popover, show some love.</div>">
+              왼쪽의 팝오버
+              </button>
+            </div>
+            <hr class='m_0'>
+
+            <div class='card_body'>
+              <div class='small fw_semibold'>버튼이랑 팝오버동일한 색상</div>
+              <div>
+                <button type='button' class='btn btn_primary' data-toggle='popover' data-offset='0,14' data-placement='top' data-custom-class='popover_primary' data-content='This is a very beautiful popover, show some love.'>
+                  primary
+                </button>
+                <button type='button' class='btn btn_secondary' data-toggle='popover' data-offset='0,14' data-placement='top' data-custom-class='popover_secondary' data-content='This is a very beautiful popover, show some love.'>
+                  secondary
+                </button>
+                <button type='button' class='btn btn_success' data-toggle='popover' data-offset='0,14' data-placement='top' data-custom-class='popover_success' data-content='This is a very beautiful popover, show some love.'>
+                  success
+                </button>
+                <button type='button' class='btn btn_danger' data-toggle='popover' data-offset='0,14' data-placement='top' data-custom-class='popover_danger' data-content='This is a very beautiful popover, show some love.'>
+                  danger
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+    </div><!-- /.container_in -->
+  </div><!-- /.container -->
+
+  <div id="footer_nav"></div><!-- /#footer_nav -->
+    
+  <div class='layout_overlay'></div><!-- /.layout_overlay -->
+
+  <div id='loding_wrap'>
+    <div id='loding_spinner' class='d_none loding_spinner_position loding_spinner spinner_border text_light'
+      role='status'>
+      <span class='visually_hidden'>Loading...</span>
+    </div>
+  </div><!-- /#loding_wrap -->
+
+</body>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+<script defer="defer" src='/admin_cdn/js/common/common.js'></script>
+<script src='/admin_cdn/js/common/document.js'></script>
+<script src='/admin_cdn/js/common/boot.js'></script>
+<!-- slick slider -->
+<script src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+<script src='/admin_cdn/js/common/slick.js'></script>
+
+</html>
+

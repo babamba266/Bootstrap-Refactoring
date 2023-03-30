@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang='kr' id="headers">
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Refactoring</title>
+  <!-- favicon -->
+  <link rel="icon" href="/admin_cdn/img/impactsoft.ico" type="image/x-icon">
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel='stylesheet' href='/admin_cdn/css/common/reset.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/core.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/layout.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/component/style.css' />
+  <!-- box-icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- slick.css -->
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#nav").load("/pages/common/nav.html");  //헤더 인클루드
+      $("#aside").load("/pages/common/aside.html");  //헤더 인클루드
+      $("#footer_nav").load("/pages/common/footer_nav.html");  //푸터부분 인클루드
+    }
+    );
+  </script>
+</head>
+<body>
+
+  <header id="nav"></header><!-- /#header -->
+  <aside id="aside" class='aside'></aside><!-- /#aside -->
+
+  <!-- 
+    카드 코드 사용법
+    - 아래 <row> … </row> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+
+    카드 1개 코드 사용법
+    - 아래 <row></row>안에 <div class="col_md_6 "><div class="card"> … </div></div> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+  --> 
+  <div class='container'>
+    <div class='container_in'>
+      <h4 class='mb_3'>UI 요소/ 카드 기본</h4>
+      <div class='row mb_5'>
+        <div class='col_md_6 col_xl_4 mb_3'>
+          <div class='card h_100'>
+            <img class='card_img_top' src='/admin_cdn/img/ui_card_img01.jpg' alt='Card image cap'>
+            <div class='card_body'>
+              <h5 class='card_title'>Card title</h5>
+              <p class='card_text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href='javascript:void(0)' class='btn btn_outline_primary'>Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class='col_md_6 col_xl_4 mb_3'>
+          <div class='card h_100'>
+            <div class='card_body'>
+              <h5 class='card_title'>Card title</h5>
+              <h6 class='card_subtitle text_muted'>Support card subtitle</h6>
+            </div>
+            <img class='img_fluid' src='/admin_cdn/img/ui_card_img02.jpg' alt='Card image cap'>
+            <div class='card_body'>
+              <p class='card_text'>Bear claw sesame snaps gummies chocolate.</p>
+              <a href='javascript:void(0);' class='card_link'>Card link</a>
+              <a href='javascript:void(0);' class='card_link'>Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class='col_md_6 col_xl_4 mb_3'>
+          <div class='card h_100'>
+            <div class='card_body'>
+              <h5 class='card_title'>Card title</h5>
+              <h6 class='card_subtitle text_muted'>Support card subtitle</h6>
+              <img class='img_fluid d_flex mx_auto my_4 rounded' src='/admin_cdn/img/ui_card_img03.jpg' alt='Card image cap'>
+              <p class='card_text'>Bear claw sesame snaps gummies chocolate.</p>
+              <a href='javascript:void(0);' class='card_link'>Card link</a>
+              <a href='javascript:void(0);' class='card_link'>Another link</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row 카드 기본 -->
+
+      <h5 class='pb_1 mb_4'>머리글과 바닥글</h5>
+      <div class='row mb_5'>
+        <div class='col_md_6 col_xl_4 mb_3'>
+          <div class='card'>
+            <div class='card_header'>추천</div>
+            <div class='card_body'>
+              <h5 class='card_title'>특별 타이틀 처리</h5>
+              <p class='card_text'>추가 콘텐츠에 대한 자연스러운 도입부로 아래 지원 텍스트와 함께 추가 콘텐츠에 대한 자연스러운 도입부.</p>
+              <a href='javascript:void(0)' class='btn btn_primary'>어딘가에 가다</a>
+            </div>
+          </div>
+        </div>
+        <div class='col_md_6 col_xl_4 mb_3'>
+          <div class='card'>
+            <h5 class='card_header'>인용하다</h5>
+            <div class='card_body'>
+              <h5 class='card_title'>특별 타이틀 처리</h5>
+              <p class='card_text'>추가 콘텐츠에 대한 자연스러운 도입부로 아래 지원 텍스트와 함께 추가 콘텐츠에 대한 자연스러운 도입부.</p>
+              <a href='javascript:void(0)' class='btn btn_primary'>어딘가에 가다</a>
+            </div>
+          </div>
+        </div>
+        <div class='col_md_6 col_xl_4 mb_3'>
+          <div class='card text_center'>
+            <div class='card_header'>추천</div>
+            <div class='card_body'>
+              <h5 class='card_title'>특별 타이틀 처리</h5>
+              <p class='card_text'>아래의 지원 텍스트와 함께 자연스럽습니다.</p>
+              <a href='javascript:void(0)' class='btn btn_primary'>어딘가에 가다</a>
+            </div>
+            <div class='card_footer text_muted'>2일 전</div>
+          </div>
+        </div>
+      </div><!-- /.row 머리글과 바닥글 -->
+
+      <h5 class='pb_1 mb_4'>텍스트정렬</h5>
+      <div class='row mb_5'>
+        <div class='col_md_6 col_xl_4'>
+          <div class='card mb_3'>
+            <div class='card_body'>
+              <h5 class='card_title'>특별 타이틀 처리</h5>
+              <p class='card_text'>추가 콘텐츠에 대한 자연스러운 도입부로 아래의 지원 텍스트와 함께.</p>
+              <a href='javascript:void(0)' class='btn btn_primary'>어딘가에 가다</a>
+            </div>
+          </div>
+        </div>
+        <div class='col_md_6 col_xl_4'>
+          <div class='card text_center mb_3'>
+            <div class='card_body'>
+              <h5 class='card_title'>특별 타이틀 처리</h5>
+              <p class='card_text'>추가 콘텐츠에 대한 자연스러운 도입부로 아래의 지원 텍스트와 함께.</p>
+              <a href='javascript:void(0)' class='btn btn_primary'>어딘가에 가다</a>
+            </div>
+          </div>
+        </div>
+        <div class='col_md_6 col_xl_4'>
+          <div class='card text_right mb_3'>
+            <div class='card_body'>
+              <h5 class='card_title'>특별 타이틀 처리</h5>
+              <p class='card_text'>추가 콘텐츠에 대한 자연스러운 도입부로 아래의 지원 텍스트와 함께.</p>
+              <a href='javascript:void(0)' class='btn btn_primary'>어딘가에 가다</a>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row 텍스트정렬 -->
+
+      <h5 class='pb_1 mb_4'>이미지 캡 및 오버레이</h5>
+      <div class='row mb_5'>
+        <div class='col_md_6 col_xl_4'>
+          <div class='card mb_3'>
+            <img class='card_img_top' src='/admin_cdn/img/ui_card_img01.jpg' alt='카드 이미지 캡'>
+            <div class='card_body'>
+              <h5 class='card_title'>카드 제목</h5>
+              <p class='card_text'>아래에 추가 콘텐츠로 자연스럽게 연결되는 지원 텍스트가 있는 더 넓은 카드입니다. 내용이 조금 더 깁니다.</p>
+              <p class='card_text'>
+              <small class='text_muted'>3분 전에 마지막으로 업데이트됨</small>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class='col_md_6 col_xl_4'>
+          <div class='card mb_3'>
+            <div class='card_body'>
+              <h5 class='card_title'>카드 제목</h5>
+              <p class='card_text'>아래에 추가 콘텐츠로 자연스럽게 연결되는 지원 텍스트가 있는 더 넓은 카드입니다. 내용이 조금 더 깁니다.</p>
+              <p class='card_text'><small class='text_muted'>3분 전에 마지막으로 업데이트됨</small></p>
+            </div>
+            <img class='card_img_bottom' src='/admin_cdn/img/ui_card_img02.jpg' alt='카드 이미지 캡'>
+          </div>
+        </div>
+        <div class='col_md_6 col_xl_4'>
+          <div class='card bg_dark border_0'>
+            <img class='card_img' src='/admin_cdn/img/ui_card_img03.jpg' alt='카드 이미지'>
+            <div class='card_img_overlay'>
+              <h5 class='card_title'>카드 제목</h5>
+              <p class='card_text text_white'>아래에 추가 콘텐츠로 자연스럽게 연결되는 지원 텍스트가 있는 더 넓은 카드입니다. 내용이 조금 더 깁니다.</p>
+              <p class='card_text text_white'>3분 전에 마지막으로 업데이트됨</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row 이미지 캡 및 오버레이 -->
+
+    </div><!-- /.container_in -->
+  </div><!-- /.container -->
+
+  <div id="footer_nav"></div><!-- /#footer_nav -->
+  
+  <div class='layout_overlay'></div><!-- /.layout_overlay -->
+
+  <div id='loding_wrap'>
+    <div id='loding_spinner' class='d_none loding_spinner_position loding_spinner spinner_border text_light'
+      role='status'>
+      <span class='visually_hidden'>Loading...</span>
+    </div>
+  </div><!-- /#loding_wrap -->
+
+</body>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+<script defer="defer" src='/admin_cdn/js/common/common.js'></script>
+<script src='/admin_cdn/js/common/document.js'></script>
+<script src='/admin_cdn/js/common/boot.js'></script>
+<!-- slick slider -->
+<script src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+<script src='/admin_cdn/js/common/slick.js'></script>
+
+</html>

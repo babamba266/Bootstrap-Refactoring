@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang='kr' id="headers">
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Refactoring</title>
+  <!-- favicon -->
+  <link rel="icon" href="/admin_cdn/img/impactsoft.ico" type="image/x-icon">
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel='stylesheet' href='/admin_cdn/css/common/reset.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/core.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/layout.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/component/style.css' />
+  <!-- box-icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- slick.css -->
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#nav").load("/pages/common/nav.html");  //헤더 인클루드
+      $("#aside").load("/pages/common/aside.html");  //헤더 인클루드
+      $("#footer_nav").load("/pages/common/footer_nav.html");  //푸터부분 인클루드
+    }
+    );
+  </script>
+</head>
+<body>
+
+  <header id="nav"></header><!-- /#header -->
+  <aside id="aside" class='aside'></aside><!-- /#aside -->
+  
+  <!-- 
+    스위치, 체크박스, 라디오 코드 사용법
+    - 스위치는 아래 <label class='switch' … >…</label> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+    - 체크박스와 라디오는 아래 <div class='form_check' … >…</div> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+  -->
+  <div class='container'>
+    <div class='container_in'>
+      <h4 class='mb_3'>UI 요소/ 스위치및 체크박스와 라디오 </h4>
+      <div class='row mb_3'>
+        <div class='col_xl_6'>
+          <div class='card'>
+            <h5 class='card_header'>스위치</h5>
+            <div class='card_body'>
+              <div>
+                <label class='switch'>
+                  <input type='checkbox' class='switch_input'>
+                  <span class='switch_toggle_slider'>
+                    <span class='switch_on'></span>
+                    <span class='switch_off'></span>
+                  </span>
+                  <span class='switch_label'>기본</span>
+                </label>
+                <label class='switch switch_square'>
+                  <input type='checkbox' class='switch_input'>
+                  <span class='switch_toggle_slider'>
+                    <span class='switch_on'></span>
+                    <span class='switch_off'></span>
+                  </span>
+                  <span class='switch_label'>정사각형</span>
+                </label>
+                <label class='switch'>
+                  <input type='checkbox' class='switch_input'>
+                  <span class='switch_toggle_slider'>
+                    <span class='switch_on'>
+                      <i class='bx bx-check'></i>
+                    </span>
+                    <span class='switch_off'>
+                      <i class='bx bx-x'></i>
+                    </span>
+                  </span>
+                  <span class='switch_label'>아이콘으로</span>
+                </label>
+                <label class='switch switch_square'>
+                  <input type='checkbox' class='switch_input'>
+                  <span class='switch_toggle_slider'>
+                    <span class='switch_on'>
+                      <i class='bx bx-check'></i>
+                    </span>
+                    <span class='switch_off'>
+                      <i class='bx bx-x'></i>
+                    </span>
+                </span>
+                  <span class='switch_label'>아이콘으로</span>
+                </label>
+              </div><!-- /switch 기본 -->
+              <br>
+
+              <div>
+                <label class='switch switch_primary'>
+                  <input type='checkbox' class='switch_input' checked=''>
+                  <span class='switch_toggle_slider'>
+                    <span class='switch_on'>
+                        <i class='bx bx-check'></i>
+                    </span>
+                    <span class='switch_off'>
+                        <i class='bx bx-x'></i>
+                    </span>
+                  </span>
+                  <span class='switch_label'>주요한</span>
+                </label>
+
+                <label class='switch switch_secondary'>
+                  <input type='checkbox' class='switch_input' checked=''>
+                  <span class='switch_toggle_slider'>
+                    <span class='switch_on'>
+                      <i class='bx bx-check'></i>
+                    </span>
+                    <span class='switch_off'>
+                      <i class='bx bx-x'></i>
+                    </span>
+                  </span>
+                  <span class='switch_label'>중고등 학년</span>
+                </label>
+
+                <label class='switch switch_success'>
+                  <input type='checkbox' class='switch_input' checked=''>
+                  <span class='switch_toggle_slider'>
+                    <span class='switch_on'>
+                      <i class='bx bx-check'></i>
+                    </span>
+                    <span class='switch_off'>
+                      <i class='bx bx-x'></i>
+                    </span>
+                  </span>
+                  <span class='switch_label'>성공</span>
+                </label>
+
+                <label class='switch switch_danger'>
+                  <input type='checkbox' class='switch_input' checked=''>
+                  <span class='switch_toggle_slider'>
+                    <span class='switch_on'>
+                      <i class='bx bx-check'></i>
+                    </span>
+                    <span class='switch_off'>
+                      <i class='bx bx-x'></i>
+                    </span>
+                  </span>
+                  <span class='switch_label'>위험</span>
+                </label>
+
+                <label class='switch switch_warning'>
+                  <input type='checkbox' class='switch_input' checked=''>
+                  <span class='switch_toggle_slider'>
+                    <span class='switch_on'>
+                      <i class='bx bx-check'></i>
+                    </span>
+                    <span class='switch_off'>
+                      <i class='bx bx-x'></i>
+                    </span>
+                  </span>
+                  <span class='switch_label'>경고</span>
+                </label>
+
+                <label class='switch switch_info'>
+                  <input type='checkbox' class='switch_input' checked=''>
+                  <span class='switch_toggle_slider'>
+                    <span class='switch_on'>
+                      <i class='bx bx-check'></i>
+                    </span>
+                    <span class='switch_off'>
+                      <i class='bx bx-x'></i>
+                    </span>
+                  </span>
+                  <span class='switch_label'>정보</span>
+                </label>
+
+                <label class='switch switch_dark'>
+                  <input type='checkbox' class='switch_input' checked=''>
+                  <span class='switch_toggle_slider'>
+                    <span class='switch_on'>
+                      <i class='bx bx-check'></i>
+                    </span>
+                    <span class='switch_off'>
+                      <i class='bx bx-x'></i>
+                    </span>
+                  </span>
+                  <span class='switch_label'>어두운</span>
+                </label>
+              </div><!-- /switch 활성화/비활성화 -->
+              
+              <div>
+                <div>
+                  <label class='switch'>
+                    <input type='checkbox' class='switch_input' disabled=''>
+                    <span class='switch_toggle_slider'>
+                      <span class='switch_on'></span>
+                      <span class='switch_off'></span>
+                    </span>
+                    <span class='switch_label'>기본값 : 꺼짐</span>
+                  </label>
+                  <br>
+                  <label class='switch'>
+                    <input type='checkbox' class='switch_input' checked='' disabled=''>
+                    <span class='switch_toggle_slider'>
+                      <span class='switch_on'></span>
+                      <span class='switch_off'></span>
+                    </span>
+                    <span class='switch_label'>기본값 - 켜짐</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>체크박스와 라디오</h5>
+            <div class='card_body'>
+              <div class='row gy_3'>
+                <div class='col_md'>
+                  <small class='fw_semibold'>체크박스</small>
+                  <div class='form_check mt_3'>
+                    <input class='form_check_input' type='checkbox' value='' id='defaultCheck1'>
+                    <label class='form_check_label' for='defaultCheck1'>
+                      선택하지 않음
+                    </label>
+                  </div>
+                  <div class='form_check'>
+                    <input class='form_check_input' type='checkbox' value='' id='defaultCheck3' checked=''>
+                    <label class='form_check_label' for='defaultCheck3'>
+                      확인됨
+                    </label>
+                  </div>
+                  <div class='form_check'>
+                    <input class='form_check_input' type='checkbox' value='' id='disabledCheck1' disabled=''>
+                    <label class='form_check_label' for='disabledCheck1'>
+                      비활성화됨 체크 안함
+                    </label>
+                  </div>
+                  <div class='form_check'>
+                    <input class='form_check_input' type='checkbox' value='' id='disabledCheck2' disabled='' checked=''>
+                    <label class='form_check_label' for='disabledCheck2'>
+                      비활성화 체크
+                    </label>
+                  </div>
+                </div>
+
+                <div class='col_md'>
+                  <small class='fw_semibold'>라디오</small>
+                  <div class='form_check mt_3'>
+                    <input name='default-radio-1' class='form_check_input' type='radio' value='' id='defaultRadio1'>
+                    <label class='form_check_label' for='defaultRadio1'>
+                      선택하지 않음
+                    </label>
+                  </div>
+                  <div class='form_check'>
+                    <input name='default-radio-1' class='form_check_input' type='radio' value='' id='defaultRadio2' checked=''>
+                    <label class='form_check_label' for='defaultRadio2'>
+                      확인됨
+                    </label>
+                  </div>
+                  <div class='form_check'>
+                    <input class='form_check_input' type='radio' value='' id='disabledRadio1' disabled=''>
+                    <label class='form_check_label' for='disabledRadio1'>
+                      비활성화됨 체크 해제됨
+                    </label>
+                  </div>
+                  <div class='form_check'>
+                    <input class='form_check_input' type='radio' value='' id='disabledRadio2' disabled='' checked=''>
+                    <label class='form_check_label' for='disabledRadio2'>
+                      비활성화된 체크박스
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class='m_0'>
+
+            <div class='card_body'>
+              <div class='row gy_3'>
+                <div class='col_md'>
+                  <small class='fw_semibold d_block'>인라인 체크박스</small>
+                  <div class='form_check form_check_inline mt_3'>
+                    <input class='form_check_input' type='checkbox' id='inlineCheckbox1' value='option1'>
+                    <label class='form_check_label' for='inlineCheckbox1'>1</label>
+                  </div>
+                  <div class='form_check form_check_inline'>
+                    <input class='form_check_input' type='checkbox' id='inlineCheckbox2' value='option2'>
+                    <label class='form_check_label' for='inlineCheckbox2'>2</label>
+                  </div>
+                  <div class='form_check form_check_inline'>
+                    <input class='form_check_input' type='checkbox' id='inlineCheckbox3' value='option3' disabled=''>
+                    <label class='form_check_label' for='inlineCheckbox3'>3(비활성화됨)</label>
+                  </div>
+                </div>
+                
+                <div class='col_md'>
+                  <small class='fw_semibold d_block'>인라인 라디오</small>
+                  <div class='form_check form_check_inline mt_3'>
+                    <input class='form_check_input' type='radio' name='inlineRadioOptions' id='inlineRadio1' value='option1'>
+                    <label class='form_check_label' for='inlineRadio1'>1</label>
+                  </div>
+                  <div class='form_check form_check_inline'>
+                    <input class='form_check_input' type='radio' name='inlineRadioOptions' id='inlineRadio2' value='option2'>
+                    <label class='form_check_label' for='inlineRadio2'>2</label>
+                  </div>
+                  <div class='form_check form_check_inline'>
+                    <input class='form_check_input' type='radio' name='inlineRadioOptions' id='inlineRadio3' value='option3' disabled=''>
+                    <label class='form_check_label' for='inlineRadio3'>3(비활성화됨)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class='m_0'>
+            
+            <div class='card_body'>
+              <div class='row gy_3'>
+                <div class='col_md'>
+                  <small class='fw_semibold d_block'>체크박스 색상</small>
+                  <div class='form_check form_check_primary mt_3'>
+                    <input class='form_check_input' type='checkbox' value='' id='customCheckPrimary' checked=''>
+                    <label class='form_check_label' for='customCheckPrimary'>primary</label>
+                  </div>
+                  <div class='form_check form_check_secondary'>
+                    <input class='form_check_input' type='checkbox' value='' id='customCheckSecondary' checked=''>
+                    <label class='form_check_label' for='customCheckSecondary'>secondary</label>
+                  </div>
+                  <div class='form_check form_check_success'>
+                    <input class='form_check_input' type='checkbox' value='' id='customCheckSuccess' checked=''>
+                    <label class='form_check_label' for='customCheckSuccess'>success</label>
+                  </div>
+                  <div class='form_check form_check_danger'>
+                    <input class='form_check_input' type='checkbox' value='' id='customCheckDanger' checked=''>
+                    <label class='form_check_label' for='customCheckDanger'>danger</label>
+                  </div>
+                </div>
+
+                <div class='col_md'>
+                  <small class='fw_semibold d_block'>라디오 색상</small>
+                  <div class='form_check form_check_primary mt_3'>
+                    <input name='customRadioPrimary' class='form_check_input' type='radio' value='' id='customRadioPrimary' checked=''>
+                    <label class='form_check_label' for='customRadioPrimary'>primary</label>
+                  </div>
+                  <div class='form_check form_check_secondary'>
+                    <input name='customRadioSecondary' class='form_check_input' type='radio' value='' id='customRadioSecondary' checked=''>
+                    <label class='form_check_label' for='customRadioSecondary'>secondary</label>
+                  </div>
+                  <div class='form_check form_check_success'>
+                    <input name='customRadioSuccess' class='form_check_input' type='radio' value='' id='customRadioSuccess' checked=''>
+                    <label class='form_check_label' for='customRadioSuccess'>success</label>
+                  </div>
+                  <div class='form_check form_check_danger'>
+                    <input name='customRadioDanger' class='form_check_input' type='radio' value='' id='customRadioDanger' checked=''>
+                    <label class='form_check_label' for='customRadioDanger'>danger</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+
+    </div><!-- /.container_in -->
+  </div><!-- /.container -->
+
+  <div id="footer_nav"></div><!-- /#footer_nav -->
+    
+  <div class='layout_overlay'></div><!-- /.layout_overlay -->
+
+  <div id='loding_wrap'>
+    <div id='loding_spinner' class='d_none loding_spinner_position loding_spinner spinner_border text_light'
+      role='status'>
+      <span class='visually_hidden'>Loading...</span>
+    </div>
+  </div><!-- /#loding_wrap -->
+
+</body>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+<script defer="defer" src='/admin_cdn/js/common/common.js'></script>
+<script src='/admin_cdn/js/common/document.js'></script>
+<script src='/admin_cdn/js/common/boot.js'></script>
+<!-- slick slider -->
+<script src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+<script src='/admin_cdn/js/common/slick.js'></script>
+
+</html>
+
+

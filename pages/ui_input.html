@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang='kr' id="headers">
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Refactoring</title>
+  <!-- favicon -->
+  <link rel="icon" href="/admin_cdn/img/impactsoft.ico" type="image/x-icon">
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel='stylesheet' href='/admin_cdn/css/common/reset.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/core.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/layout.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/component/style.css' />
+  <!-- box-icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- slick.css -->
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#nav").load("/pages/common/nav.html");  //헤더 인클루드
+      $("#aside").load("/pages/common/aside.html");  //헤더 인클루드
+      $("#footer_nav").load("/pages/common/footer_nav.html");  //푸터부분 인클루드
+    }
+    );
+  </script>
+</head>
+<body>
+
+  <header id="nav"></header><!-- /#header -->
+  <aside id="aside" class='aside'></aside><!-- /#aside -->
+
+  <!-- 
+    입력폼 양식 코드 사용법
+    - 아래 <div class='col_xl_6'> … </div> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+  -->
+  <div class='container'>
+    <div class='container_in'>
+      
+      <h4 class='mb_3'>UI 요소/ 입력폼</h4>
+      <div class='row mb_3'>
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>기본 양식01</h5>
+            <div class='card_body'>
+              <div class='mb_3'>
+                <label for='exampleFormControlInput1' class='form_label'>텍스트</label>
+                <input type='text' class='form_control' id='exampleFormControlInput1' placeholder='내용을 입력하세요'>
+              </div>
+              <div class='mb_3'>
+                <label for='exampleFormControlReadOnlyInput1' class='form_label'>읽기 전용</label>
+                <input class='form_control' type='text' id='exampleFormControlReadOnlyInput1' placeholder='읽기전용 입력안됩니다.'
+                  readonly=''>
+              </div>
+              <div class='mb_3'>
+                <label for='exampleFormControlReadOnlyInputPlain1' class='form_label'>일반 읽기</label>
+                <input type='text' readonly='' class='form_control_plaintext' id='exampleFormControlReadOnlyInputPlain1'
+                  value='email@example.com'>
+              </div>
+              <div class='mb_3'>
+                <label for='exampleFormControlSelect1' class='form_label'>예시 선택</label>
+                <select class='form_select' id='exampleFormControlSelect1'>
+                  <option selected=''>이 선택 메뉴 열기</option>
+                  <option value='1'>하나</option>
+                  <option value='2'>둘</option>
+                  <option value='3'>삼</option>
+                </select>
+              </div>
+
+              <div>
+                <label for='exampleFormControlTextarea1' class='form_label'>예제 텍스트 영역</label>
+                <textarea class='form_control' id='exampleFormControlTextarea1' rows='3'></textarea>
+              </div>
+            </div>
+            <hr class='m_0'>
+            <h5 class='card_header'>파일 입력</h5>
+            <div class='card_body'>
+              <div class='mb_3'>
+                <label for='formFile' class='form_label'>기본 파일 입력 예</label>
+                <input class='form_control' type='file' id='formFile'>
+              </div>
+              <div class='mb_3'>
+                <label for='formFileMultiple' class='form_label'>여러 파일 입력 예</label>
+                <input class='form_control' type='file' id='formFileMultiple' multiple=''>
+              </div>
+              <div>
+                <label for='formFileDisabled' class='form_label'>비활성화된 파일 입력 예</label>
+                <input class='form_control' type='file' id='formFileDisabled' disabled=''>
+              </div>
+            </div>
+          </div><!-- /.card -->
+        </div><!-- /.col_xl_6 / 기본 양식01-->
+
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>기본 양식02</h5>
+            <div class='card_body'>
+              <div class='mb_3 row'>
+                <label for='html5-text-input' class='col_md_2 col_form_label'>텍스트</label>
+                <div class='col_md_10'>
+                  <input class='form_control' type='text' placeholder='내용을입력하세요' id='html5-text-input'>
+                </div>
+              </div>
+              <div class='mb_3 row'>
+                <label for='html5-email-input' class='col_md_2 col_form_label'>이메일</label>
+                <div class='col_md_10'>
+                  <input class='form_control' type='email' value='inpactsoft@example.com' id='html5-email-input'>
+                </div>
+              </div>
+              <div class='mb_3 row'>
+                <label for='html5-tel-input' class='col_md_2 col_form_label'>핸드폰</label>
+                <div class='col_md_10'>
+                  <input class='form_control' type='tel' value='010-0000-0000' id='html5-tel-input'>
+                </div>
+              </div>
+              <div class='mb_3 row'>
+                <label for='html5-password-input' class='col_md_2 col_form_label'>비밀번호</label>
+                <div class='col_md_10'>
+                  <input class='form_control' type='password' value='password' id='html5-password-input'>
+                </div>
+              </div>
+              <div class='mb_3 row'>
+                <label for='html5-number-input' class='col_md_2 col_form_label'>숫자</label>
+                <div class='col_md_10'>
+                  <input class='form_control' type='number' value='18' id='html5-number-input'>
+                </div>
+              </div>
+              <div class='mb_3 row'>
+                <label for='html5-datetime-local-input' class='col_md_2 col_form_label'>날짜 시간</label>
+                <div class='col_md_10'>
+                  <input class='form_control' type='datetime-local' value='2021-06-18T12:30:00'
+                    id='html5-datetime-local-input'>
+                </div>
+              </div>
+              <div class='mb_3 row'>
+                <label for='html5-date-input' class='col_md_2 col_form_label'>날짜</label>
+                <div class='col_md_10'>
+                  <input class='form_control' type='date' value='2021-06-18' id='html5-date-input'>
+                </div>
+              </div>
+              <div class='mb_3 row'>
+                <label for='html5-month-input' class='col_md_2 col_form_label'>월</label>
+                <div class='col_md_10'>
+                  <input class='form_control' type='month' value='2021-06' id='html5-month-input'>
+                </div>
+              </div>
+              <div class='mb_3 row'>
+                <label for='html5-time-input' class='col_md_2 col_form_label'>시간</label>
+                <div class='col_md_10'>
+                  <input class='form_control' type='time' value='12:30:00' id='html5-time-input'>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.card -->
+        </div><!-- /.col_xl_6 / 기본 양식02-->
+      </div><!-- /.row -->
+
+      <div class='row mb_3'>
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>선 있는 아이콘 입력창</h5>
+            <div class='card_body'>
+              <div class='mb_3'>
+                <div class='input_group'>
+                  <input type='text' class='form_control' id='username01' placeholder='내용을 입력하세요'>
+                  <span class='input_group_text' id='basic-addon11'>@</span>
+                </div>
+              </div>
+              <div class='form-password-toggle mb_2'>
+                <label class='form_label' for='basic-default-password12'>Password</label>
+                <div class='input_group'>
+                  <input type='password' class='form_control' id='basic-default-password12' placeholder='············'>
+                  <span id='basic-default-password2' class='input_group_text cursor-pointer'><i
+                      class='bx bx-hide'></i></span>
+                </div>
+              </div>
+              <div class='input_group mb_2'>
+                <input type='text' class='form_control' placeholder='이메일을 입력하세요'>
+                <span class='input_group_text' id='basic-addon13'>@example.com</span>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.col_xl_6 / 선 있는 아이콘 입력창-->
+
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>선 없는 아이콘 입력창</h5>
+            <div class='card_body'>
+              <div class='input_group input_group_merge mb_2'>
+                <input type='text' class='form_control' placeholder='내용을 입력하세요'>
+                <span class='input_group_text' id='basic-addon-search31'><i class='bx bx-search'></i></span>
+              </div>
+              <div class='form-password-toggle mb_2'>
+                <label class='form_label' for='basic-default-password32'>Password</label>
+                <div class='input_group input_group_merge'>
+                  <input type='password' class='form_control' id='basic-default-password32' placeholder='············'>
+                  <span class='input_group_text cursor-pointer' id='basic-default-password'><i
+                      class='bx bx-hide'></i></span>
+                </div>
+              </div>
+              <div class='input_group input_group_merge mb_2'>
+                <input type='text' class='form_control' placeholder='이메일을 입력하세요'>
+                <span class='input_group_text' id='basic-addon33'>@example.com</span>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.col_xl_6 / 선 없는 아이콘 입력창-->
+      </div><!-- /.row -->
+
+    </div><!-- /.container_in -->
+  </div><!-- /.container -->
+
+  <div id="footer_nav"></div><!-- /#footer_nav -->
+  
+  <div class='layout_overlay'></div><!-- /.layout_overlay -->
+
+  <div id='loding_wrap'>
+    <div id='loding_spinner' class='d_none loding_spinner_position loding_spinner spinner_border text_light'
+      role='status'>
+      <span class='visually_hidden'>Loading...</span>
+    </div>
+  </div><!-- /#loding_wrap -->
+  
+</body>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+<script defer="defer" src='/admin_cdn/js/common/common.js'></script>
+<script src='/admin_cdn/js/common/document.js'></script>
+<script src='/admin_cdn/js/common/boot.js'></script>
+<!-- slick slider -->
+<script src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+<script src='/admin_cdn/js/common/slick.js'></script>
+
+</html>

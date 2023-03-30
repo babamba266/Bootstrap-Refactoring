@@ -1,0 +1,14 @@
+<footer id="footer">
+  <div class="footer">
+    <div class="this-year"></div>
+  </div>
+</footer>
+
+<script>
+  //올해가 몇년도인지 나타내는것
+  var now = new Date();	// 현재 날짜 및 시간
+  var year = now.getFullYear(); // 연도
+  var month = now.getMonth() + 1;
+  var paddedNumber = ("0" + month).slice(-2);
+  $('.footer .this-year').text(year+"."+paddedNumber)
+</script>

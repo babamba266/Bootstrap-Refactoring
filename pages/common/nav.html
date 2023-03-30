@@ -1,0 +1,84 @@
+<nav class='nav'>
+  <div class='aside_menubar' onclick='asidebar();'>
+    <i class='bx bx-menu bx-sm'></i>
+  </div>
+  <div class='util'>
+    <div class='lang'>
+      <ul>
+        <li class='lang_dropdown'>
+          <a href='javascript:void(0);' id='langSelect' onclick="langDropdown()">
+            <div class="lang_select lang_kr"></div>
+          </a>
+          <ul class='lang_dropdown_menu'>
+            <li onclick="langset('kr')">
+              <div class="lang_img lang_kr"></div>
+              <span value='kr'>Korean</span>
+            </li>
+            <li onclick="langset('en')">
+              <div class="lang_img lang_us"></div>
+              <span value='en'>English</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.lang -->
+    <div class='user_settings'>
+
+      <div class='dark_dark' onclick="lightdark('dark_mode')">
+        <i class='bx bx-sm bx-moon' data-toggle="tooltip" data-placement="bottom"
+          title="Dark mode"></i>
+      </div>
+      <div class='dark_light d_none' onclick="lightdark('light_mode')">
+        <i class='bx bx-sm bx-sun' data-toggle="tooltip" data-placement="bottom"
+          title="Light mode"></i>
+      </div>
+
+    </div><!-- /.user_settings -->
+    <div class='myinfo'>
+      <ul>
+        <li class='my_dropdown'>
+          <a href='javascript:void(0);' onclick="myinfoDropdown()">
+            <i class='bx bx-user bx-sm me_2'></i>
+          </a>
+          <ul class='my_dropdown_menu'>
+            <li><a href='user_detail.html?mode=update'><i class='bx bx-user me_2'></i>마이페이지</a></li>
+            <li><a href='##'><i class='bx bx-cog me_2'></i>환경설정</a></li>
+            <li><a href='login.html'><i class='bx bx-log-in me_2'></i>로그인</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.myinfo -->
+  </div>
+</nav>
+<script>
+//다크모드 구현하기
+$(document).ready(function() {
+  var mode = localStorage.getItem("mode");
+  if (mode === "dark_mode") {
+    lightdark("dark_mode");
+  } else if (mode === "light_mode") {
+    lightdark("light_mode");
+  }
+});
+function lightdark(mode) {
+  if(mode === "dark_mode") {
+    $("body").addClass("dark_mode");
+    $("body").removeClass("light_mode");
+    $(".dark_dark").addClass("d_none");
+    $(".dark_light").removeClass("d_none");
+    localStorage.setItem("mode", "dark_mode");
+  } else if(mode === "light_mode") {
+    $("body").addClass("light_mode");
+    $("body").removeClass("dark_mode");
+    $(".dark_light").addClass("d_none");
+    $(".dark_dark").removeClass("d_none");
+    localStorage.setItem("mode", "light_mode");
+  }
+}
+$(".dark_dark").click(function() {
+  lightdark("dark_mode");
+});
+$(".dark_light").click(function() {
+  lightdark("light_mode");
+});
+</script>

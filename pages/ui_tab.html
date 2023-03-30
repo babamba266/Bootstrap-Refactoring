@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang='kr' id="headers">
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Refactoring</title>
+  <!-- favicon -->
+  <link rel="icon" href="/admin_cdn/img/impactsoft.ico" type="image/x-icon">
+
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel='stylesheet' href='/admin_cdn/css/common/reset.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/core.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/layout.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/component/style.css' />
+  <!-- box-icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- slick.css -->
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#nav").load("/pages/common/nav.html");  //헤더 인클루드
+      $("#aside").load("/pages/common/aside.html");  //헤더 인클루드
+      $("#footer_nav").load("/pages/common/footer_nav.html");  //푸터부분 인클루드
+    }
+    );
+  </script>
+</head>
+<body>
+
+  <header id="nav"></header><!-- /#header -->
+  <aside id="aside" class='aside'></aside><!-- /#aside -->
+  <!-- 
+    탭메뉴 사용시 주의사항
+    - 탭메뉴를 다른 페이지에 긁어서 복사 할 시 id랑 a태그에 있는 네임명 바꾸기
+
+    탭메뉴 코드 사용법
+    - 아래 <div class='nav_align_… >…</div> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+  -->
+  <div class='container'>
+    <div class='container_in'>
+      <h4 class='mb_3'>UI 요소/ 탭 </h4>
+      <div class='row mb_5'>
+        <div class='col_xl_6 mb_4'>
+          <h6 class='mb_2'>기본 탭</h6>
+          <div class='nav_align_top'>
+            <ul class='nav_tabs'>
+              <li class='active'><a href='#tab_top01' data-toggle='tab'>탭메뉴1</a></li>
+              <li><a href='#tab_top02' data-toggle='tab'>탭메뉴2</a></li>
+              <li><a href='#tab_top03' data-toggle='tab'>탭메뉴3</a></li>
+            </ul>
+            <div class='tab_content'>
+              <div class='tab_pane fade in active' id='tab_top01'><p>탭메뉴1 내용</p></div>
+              <div class='tab_pane fade' id='tab_top02'><p>탭메뉴2 내용</p></div>
+              <div class='tab_pane fade' id='tab_top03'><p>탭메뉴3 내용</p></div>
+            </div>
+          </div>
+        </div>
+        <div class='col_xl_6'>
+          <h6 class='mb_2'>채워진 탭</h6>
+          <div class='nav_align_top'>
+            <ul class='nav_tabs nav_fill'>
+              <li class='active'>
+                <a href='#tab_top_fill01' data-toggle='tab'>
+                  <i class='tf-icons bx bx-home'></i>탭메뉴1
+                  <span class='badge rounded_pill badge-center bg_danger'>3</span>
+                </a>
+              </li>
+              <li>
+                <a href='#tab_top_fill02' data-toggle='tab'>
+                  <i class='tf-icons bx bx-user'></i>탭메뉴2
+                </a>
+              </li>
+              <li>
+                <a href='#tab_top_fill03' data-toggle='tab'>
+                  <i class='tf-icons bx bx-message-square'></i>탭메뉴3
+                </a>
+              </li>
+            </ul>
+            <div class='tab_content'>
+              <div class='tab_pane fade in active' id='tab_top_fill01'><p>탭메뉴1 내용</p></div>
+              <div class='tab_pane fade' id='tab_top_fill02'><p>탭메뉴2 내용</p></div>
+              <div class='tab_pane fade' id='tab_top_fill03'><p>탭메뉴3 내용</p></div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+
+      <div class='row mb_5'>
+        <div class='col_xl_6 mb_4'>
+          <h6 class='mb_2'>수직 탭</h6>
+          <div class='nav_align_left'>
+            <ul class='nav_tabs'>
+              <li class='active'><a href='#tab_left01' data-toggle='tab'>탭메뉴1</a></li>
+              <li><a href='#tab_left02' data-toggle='tab'>탭메뉴2</a></li>
+              <li><a href='#tab_left03' data-toggle='tab'>탭메뉴3</a></li>
+            </ul>
+            <div class='tab_content'>
+              <div class='tab_pane fade in active' id='tab_left01'><p>탭메뉴1 내용</p></div>
+              <div class='tab_pane fade' id='tab_left02'><p>탭메뉴2 내용</p></div>
+              <div class='tab_pane fade' id='tab_left03'><p>탭메뉴3 내용</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class='col_xl_6'>
+          <h6 class='mb_2'>하단 탭</h6>
+          <div class='nav_align_bottom'>
+            <ul class='nav_tabs'>
+              <li class='active'><a href='#tab_bottom01' data-toggle='tab'>탭메뉴1</a></li>
+              <li><a href='#tab_bottom02' data-toggle='tab'>탭메뉴2</a></li>
+              <li><a href='#tab_bottom03' data-toggle='tab'>탭메뉴3</a></li>
+            </ul>
+            <div class='tab_content'>
+              <div class='tab_pane fade in active' id='tab_bottom01'><p>탭메뉴1 내용</p></div>
+              <div class='tab_pane fade' id='tab_bottom02'><p>탭메뉴2 내용</p></div>
+              <div class='tab_pane fade' id='tab_bottom03'><p>탭메뉴3 내용</p></div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+
+      <div class='row mb_5'>
+        <div class='col_xl_6 mb_4'>
+          <h6 class='mb_2'>따로 있는 기본 탭</h6>
+          <div class='nav_align_top'>
+            <ul class='nav_tabs nav_pills'>
+              <li class='active'><a href='#tab_top_pills01' data-toggle='tab'>탭메뉴1</a></li>
+              <li><a href='#tab_top_pills02' data-toggle='tab'>탭메뉴2</a></li>
+              <li><a href='#tab_top_pills03' data-toggle='tab'>탭메뉴3</a></li>
+            </ul>
+            <div class='tab_content'>
+              <div class='tab_pane fade in active' id='tab_top_pills01'><p>탭메뉴1 내용</p></div>
+              <div class='tab_pane fade' id='tab_top_pills02'><p>탭메뉴2 내용</p></div>
+              <div class='tab_pane fade' id='tab_top_pills03'><p>탭메뉴3 내용</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class='col_xl_6 mb_4'>
+          <h6 class='mb_2'>따로 있는 채워진 탭</h6>
+          <div class='nav_align_top'>
+            <ul class='nav_tabs nav_pills nav_fill'>
+              <li class='active'>
+                <a href='#tab_top_pfill01' data-toggle='tab'>
+                  <i class='tf-icons bx bx-home'></i>탭메뉴1
+                  <span class='badge rounded_pill badge-center bg_danger'>3</span>
+                </a>
+              </li>
+              <li>
+                <a href='#tab_top_pfill02' data-toggle='tab'>
+                  <i class='tf-icons bx bx-user'></i>탭메뉴2
+                </a>
+              </li>
+              <li>
+                <a href='#tab_top_pfill03' data-toggle='tab'>
+                  <i class='tf-icons bx bx-message-square'></i>탭메뉴3
+                </a>
+              </li>
+            </ul>
+            <div class='tab_content'>
+              <div class='tab_pane fade in active' id='tab_top_pfill01'><p>탭메뉴1 내용</p></div>
+              <div class='tab_pane fade' id='tab_top_pfill02'><p>탭메뉴2 내용</p></div>
+              <div class='tab_pane fade' id='tab_top_pfill03'><p>탭메뉴3 내용</p></div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+
+      <div class='row mb_5'>
+        <div class='col_xl_6 mb_4'>
+          <h6 class='mb_2'>따로 있는 수직 탭</h6>
+          <div class='nav_align_left'>
+            <ul class='nav_tabs nav_pills'>
+              <li class='active'><a href='#tab_left_pills01' data-toggle='tab'>탭메뉴1</a></li>
+              <li><a href='#tab_left_pills02' data-toggle='tab'>탭메뉴2</a></li>
+              <li><a href='#tab_left_pills03' data-toggle='tab'>탭메뉴3</a></li>
+            </ul>
+            <div class='tab_content'>
+              <div class='tab_pane fade in active' id='tab_left_pills01'><p>탭메뉴1 내용</p></div>
+              <div class='tab_pane fade' id='tab_left_pills02'><p>탭메뉴2 내용</p></div>
+              <div class='tab_pane fade' id='tab_left_pills03'><p>탭메뉴3 내용</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class='col_xl_6 mb_4'>
+          <h6 class='mb_2'>카드내</h6>
+          <div class='card'>
+            <div class='card_body'>
+              <div class='nav_align_top'>
+                <ul class='nav_tabs nav_pills'>
+                  <li class='active'><a href='#tab_card_pills01' data-toggle='tab'>탭메뉴1</a></li>
+                  <li><a href='#tab_card_pills02' data-toggle='tab'>탭메뉴2</a></li>
+                  <li><a href='#tab_card_pills03' data-toggle='tab'>탭메뉴3</a></li>
+                </ul>
+                <div class='tab_content'>
+                  <div class='tab_pane fade in active' id='tab_card_pills01'><p>탭메뉴1 내용</p></div>
+                  <div class='tab_pane fade' id='tab_card_pills02'><p>탭메뉴2 내용</p></div>
+                  <div class='tab_pane fade' id='tab_card_pills03'><p>탭메뉴3 내용</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+
+    </div><!-- /.container_in -->
+  </div><!-- /.container -->
+
+  <div id="footer_nav"></div><!-- /#footer_nav -->
+    
+  <div class='layout_overlay'></div><!-- /.layout_overlay -->
+
+  <div id='loding_wrap'>
+    <div id='loding_spinner' class='d_none loding_spinner_position loding_spinner spinner_border text_light'
+      role='status'>
+      <span class='visually_hidden'>Loading...</span>
+    </div>
+  </div><!-- /#loding_wrap -->
+
+</body>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+<script defer="defer" src='/admin_cdn/js/common/common.js'></script>
+<script src='/admin_cdn/js/common/document.js'></script>
+<script src='/admin_cdn/js/common/boot.js'></script>
+<!-- slick slider -->
+<script src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+<script src='/admin_cdn/js/common/slick.js'></script>
+
+</html>
+
+

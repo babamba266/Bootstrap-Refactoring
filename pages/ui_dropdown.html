@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang='kr' id="headers">
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Refactoring</title>
+  <!-- favicon -->
+  <link rel="icon" href="/admin_cdn/img/impactsoft.ico" type="image/x-icon">
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel='stylesheet' href='/admin_cdn/css/common/reset.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/core.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/layout.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/component/style.css' />
+  <!-- box-icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- slick.css -->
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#nav").load("/pages/common/nav.html");  //헤더 인클루드
+      $("#aside").load("/pages/common/aside.html");  //헤더 인클루드
+      $("#footer_nav").load("/pages/common/footer_nav.html");  //푸터부분 인클루드
+    }
+    );
+  </script>
+</head>
+<body>
+
+  <header id="nav"></header><!-- /#header -->
+  <aside id="aside" class='aside'></aside><!-- /#aside -->
+
+  <!-- 
+    드롭다운 코드 사용법
+    - 아래 <div class="dropdown"> … </div> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+    
+    아이콘 드롭다운 코드 사용법
+    - 아래 <div class="btn_group"> … </div> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+  
+    모달 코드 사용법
+    - 아래 <button type='button'> … </button>
+  -->
+  <div class='container'>
+    <div class='container_in'>
+
+      <h4 class='mb_3'>UI 요소/ 드롭다운 및 모달창 </h4>
+      <div class='row mb_3'>
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>기본 드롭다운</h5>
+            <div class='card_body'>
+              <div class='d_flex mb_3 gap_2'>
+                <div class='dropdown'>
+                  <button class='btn btn_primary dropdown_toggle' type='button' id='dropdownMenuButton'
+                    data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Dropdown button</button>
+                  <ul class='dropdown_menu' aria-labelledby='dropdownMenuButton'>
+                    <li><a class='dropdown_item' href='#'>Action</a></li>
+                    <li><a class='dropdown_item' href='#'>Another action</a></li>
+                    <li><a class='dropdown_item' href='#'>Something else here</a></li>
+                  </ul>
+                </div>
+                <div class='dropdown'>
+                  <button class='btn btn_secondary dropdown_toggle' type='button' id='dd1' data-toggle='dropdown'
+                    aria-haspopup='true' aria-expanded='false'>
+                    Dropdown button
+                  </button>
+                  <ul class='dropdown_menu' aria-labelledby='dd1'>
+                    <li><a class='dropdown_item' href='#'>Action</a></li>
+                    <li><a class='dropdown_item' href='#'>Another action</a></li>
+                    <li><a class='dropdown_item' href='#'>Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class='d_flex gap_2'>
+                <div class='dropdown'>
+                  <button class='btn btn_outline_primary dropdown_toggle' type='button' id='dropdownMenuButton'
+                    data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Dropdown button</button>
+                  <ul class='dropdown_menu' aria-labelledby='dropdownMenuButton'>
+                    <li><a class='dropdown_item' href='#'>Action</a></li>
+                    <li><a class='dropdown_item' href='#'>Another action</a></li>
+                    <li><a class='dropdown_item' href='#'>Something else here</a></li>
+                  </ul>
+                </div>
+                <div class='dropdown'>
+                  <button class='btn btn_outline_secondary dropdown_toggle' type='button' id='dd1'
+                    data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                    Dropdown button
+                  </button>
+                  <ul class='dropdown_menu' aria-labelledby='dd1'>
+                    <li><a class='dropdown_item' href='#'>Action</a></li>
+                    <li><a class='dropdown_item' href='#'>Another action</a></li>
+                    <li><a class='dropdown_item' href='#'>Something else here</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div><!-- /.card_body 기본 드롭다운 -->
+
+            <hr class='m_0'>
+            <div class='card_body'>
+              <small class='fw_semibold'>아이콘 드롭다운</small>
+              <div>
+                <div class='btn_group'>
+                  <button type='button' class='btn btn_primary btn_icon rounded_pill dropdown_toggle hide_arrow'
+                    data-toggle='dropdown' aria-expanded='false'><i class='bx bx-dots-vertical-rounded'></i></button>
+                  <ul class='dropdown_menu'>
+                    <li><a class='dropdown_item' href='javascript:void(0);'>동작</a></li>
+                    <li><a class='dropdown_item' href='javascript:void(0);'>또 다른 행동</a></li>
+                    <li><a class='dropdown_item' href='javascript:void(0);'>여기에 다른 것</a></li>
+                    <li>
+                      <hr class='dropdown-divider'>
+                    </li>
+                    <li><a class='dropdown_item' href='javascript:void(0);'>분리된 링크</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div><!-- /.card_body 아이콘 드롭다운 -->
+          </div><!-- /.card -->
+        </div><!-- /.col_xl_6 -->
+
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>기본 모달창</h5>
+            <div class='card_body pb_0'>
+              <button type='button' class='btn btn_primary' data-toggle='modal' data-target='#exampleModal'>
+                위에 기본 모달
+              </button>
+              <div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel'
+                aria-hidden='true'>
+                <div class='modal_dialog' role='document'>
+                  <div class='modal_content'>
+                    <div class='modal_header'>
+                      <h5 class='modal_title' id='exampleModalLabel'>Modal title</h5>
+                      <button type='button' class='btn_close' data-dismiss='modal'>
+                        <i class='bx bx-x'></i>
+                      </button>
+                    </div>
+                    <div class='modal_body'>
+                      <div class='row'>
+                        <div class='col mb_3'>
+                          <label for='nameSlideTop' class='form_label'>이름</label>
+                          <input type='text' id='nameSlideTop' class='form_control' placeholder='이름을 입력하시오'>
+                        </div>
+                      </div>
+                      <div class='row g_2'>
+                        <div class='col mb_0'>
+                          <label for='emailSlideTop' class='form_label'>이메일</label>
+                          <input type='text' id='emailSlideTop' class='form_control' placeholder='xxx@xxx.xx'>
+                        </div>
+                        <div class='col mb_0'>
+                          <label for='dobSlideTop' class='form_label'>생년월일</label>
+                          <input type='text' id='dobSlideTop' class='form_control' placeholder='DD / MM / YY'>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='modal_footer'>
+                      <button type='button' class='btn btn_secondary' data-dismiss='modal'>취소</button>
+                      <button type='button' class='btn btn_primary'>저장하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- button까지 포함 / 위에 기본 모달 -->
+
+              
+              <button type='button' class='btn btn_primary' data-toggle='modal' data-target='#exampleModalCenter'>
+                수직 중심 모달
+              </button>
+              <!-- Modal -->
+              <div class='modal fade' id='exampleModalCenter' tabindex='-1' role='dialog'
+                aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
+                <div class='modal_dialog modal_dialog_centered' role='document'>
+                  <div class='modal_content'>
+                    <div class='modal_header'>
+                      <h5 class='modal_title' id='exampleModalCenterTitle'>Modal title</h5>
+                      <button type='button' class='btn_close' data-dismiss='modal'>
+                        <i class='bx bx-x'></i>
+                      </button>
+                    </div>
+                    <div class='modal_body'>
+                      <div class='row'>
+                        <div class='col mb_3'>
+                          <label for='namecenter' class='form_label'>이름</label>
+                          <input type='text' id='namecenter' class='form_control' placeholder='이름을 입력하시오'>
+                        </div>
+                      </div>
+                      <div class='row g_2'>
+                        <div class='col mb_0'>
+                          <label for='emailcenter' class='form_label'>이메일</label>
+                          <input type='text' id='emailcenter' class='form_control' placeholder='xxx@xxx.xx'>
+                        </div>
+                        <div class='col mb_0'>
+                          <label for='birthdaycenter' class='form_label'>생년월일</label>
+                          <input type='text' id='birthdaycenter' class='form_control' placeholder='DD / MM / YY'>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='modal_footer'>
+                      <button type='button' class='btn btn_secondary' data-dismiss='modal'>취소</button>
+                      <button type='button' class='btn btn_primary'>저장하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- button까지 포함 / 수직 중심 모달 -->
+            </div><!-- /.card_body -->
+
+            <div class='card_body'>
+              <button type='button' class='btn btn_primary' data-toggle='modal' data-target='#exampleModalLong'>
+                긴컨텐츠 모달
+              </button>
+              <div class='modal fade' id='exampleModalLong' tabindex='-1' role='dialog'
+                aria-labelledby='exampleModalLongTitle' aria-hidden='true'>
+                <div class='modal_dialog' role='document'>
+                  <div class='modal_content'>
+                    <div class='modal_header'>
+                      <h5 class='modal_title' id='exampleModalLongTitle'>Modal title</h5>
+                      <button type='button' class='btn_close' data-dismiss='modal'>
+                        <i class='bx bx-x'></i>
+                      </button>
+                    </div>
+                    <div class='modal_body' style='height: 110vh'>
+                      ...
+                    </div>
+                    <div class='modal_footer'>
+                      <button type='button' class='btn btn_secondary' data-dismiss='modal'>취소</button>
+                      <button type='button' class='btn btn_primary'>저장하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- button까지 포함 / 긴컨텐츠모달 -->
+
+              <button type='button' class='btn btn_primary' data-toggle='modal' data-target='#exampleModalScrollable'>
+                긴컨텐츠 스크롤 모달
+              </button>
+              <div class='modal fade' id='exampleModalScrollable' tabindex='-1' role='dialog'
+                aria-labelledby='exampleModalScrollableTitle' aria-hidden='true'>
+                <div class='modal_dialog modal_dialog_scrollable' role='document'>
+                  <div class='modal_content'>
+                    <div class='modal_header'>
+                      <h5 class='modal_title' id='exampleModalScrollableTitle'>Modal title</h5>
+                      <button type='button' class='close' data-dismiss='modal'>
+                        <i class='bx bx-x'></i>
+                      </button>
+                    </div>
+                    <div class='modal_body'>
+                      <div style='height:1200px'>테스트</div>
+                    </div>
+                    <div class='modal_footer'>
+                      <button type='button' class='btn btn_secondary' data-dismiss='modal'>취소</button>
+                      <button type='button' class='btn btn_primary'>저장하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- button까지 포함 / 긴컨텐츠 스크롤 모달 -->
+            </div><!-- /.card_body -->
+          </div><!-- /.card -->
+        </div><!-- /.col_xl_6 -->
+      </div><!-- /.row -->
+
+      <div class='row mb_3'>
+        <div class='col_xl_6'>
+          <div class='card mb_4' id='page-block'>
+            <h5 class='card_header'>페이지 차단</h5>
+            <div class='card_body'>
+              <p class='card_text'>
+                Lorem ipsum dolor sit amet, affert soleat possim.Usu meis neglegentur ut, oporteat salutandi dignissim
+                at mea.Pericula erroribus quaerendum ex duo, his autem accusamus ad, alienum detracto rationibus vis
+                et.No est volumus occurreret vituperata.
+              </p>
+              <p class='card_text'>
+                Lorem ipsum dolor sit amet, affert soleat possim.Usu meis neglegentur ut, oporteat salutandi dignissim
+              </p>
+              <div class='block-ui-btn demo-inline-spacing'>
+                <button type='button' class='btn btn_primary' onclick='lodingWrap01();'>기본</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+      
+    </div><!-- /.container_in -->
+  </div><!-- /.container -->
+
+  <div id="footer_nav"></div><!-- /#footer_nav -->
+  
+  <div class='layout_overlay'></div><!-- /.layout_overlay -->
+
+  <div id='loding_wrap'>
+    <div id='loding_spinner' class='d_none loding_spinner_position loding_spinner spinner_border text_light'
+      role='status'>
+      <span class='visually_hidden'>Loading...</span>
+    </div>
+  </div><!-- /#loding_wrap -->
+  
+</body>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+<script defer="defer" src='/admin_cdn/js/common/common.js'></script>
+<script src='/admin_cdn/js/common/document.js'></script>
+<script src='/admin_cdn/js/common/boot.js'></script>
+<!-- slick slider -->
+<script src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+<script src='/admin_cdn/js/common/slick.js'></script>
+
+</html>

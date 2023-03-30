@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang='kr' id="headers">
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Refactoring</title>
+  <!-- favicon -->
+  <link rel="icon" href="/admin_cdn/img/impactsoft.ico" type="image/x-icon">
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel='stylesheet' href='/admin_cdn/css/common/reset.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/core.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/layout.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/component/style.css' />
+  <!-- box-icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- slick.css -->
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#nav").load("/pages/common/nav.html");  //헤더 인클루드
+      $("#aside").load("/pages/common/aside.html");  //헤더 인클루드
+      $("#footer_nav").load("/pages/common/footer_nav.html");  //푸터부분 인클루드
+    }
+    );
+  </script>
+</head>
+<body>
+
+  <header id="nav"></header><!-- /#header -->
+  <aside id="aside" class='aside'></aside><!-- /#aside -->
+
+  <!-- 
+    버튼 코드 사용법
+    - 아래 <button> … </button> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+  -->
+  <div class='container'>
+    <div class='container_in'>
+      <h4 class='mb_3'>UI 요소/ 버튼 및 배지</h4>
+      <div class='row mb_3'>
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>기본 버튼</h5>
+            <div class='card_body'>
+              <small class='fw_semibold'>기본</small>
+              <div>
+                <button type='button' class='btn btn_primary'>Primary</button>
+                <button type='button' class='btn btn_secondary'>Secondary</button>
+                <button type='button' class='btn btn_success'>Success</button>
+                <button type='button' class='btn btn_danger'>Danger</button>
+              </div>
+            </div>
+            <hr class='m_0'>
+            <div class='card_body'>
+              <small class='fw_semibold'>라운드</small>
+              <div>
+                <button type='button' class='btn rounded_pill btn_primary'>Primary</button>
+                <button type='button' class='btn rounded_pill btn_secondary'>Secondary</button>
+                <button type='button' class='btn rounded_pill btn_success'>Success</button>
+                <button type='button' class='btn rounded_pill btn_danger'>Danger</button>
+              </div>
+            </div>
+          </div>
+        </div><!--/.col_xl_6 기본버튼  -->
+
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>아웃라인 버튼</h5>
+            <div class='card_body'>
+              <small class='fw_semibold'>기본</small>
+              <div>
+                <button type='button' class='btn btn_outline_primary'>Primary</button>
+                <button type='button' class='btn btn_outline_secondary'>Secondary</button>
+                <button type='button' class='btn btn_outline_success'>Success</button>
+                <button type='button' class='btn btn_outline_danger'>Danger</button>
+              </div>
+            </div>
+            <hr class='m_0'>
+            <div class='card_body'>
+              <small class='fw_semibold'>라운드</small>
+              <div>
+                <button type='button' class='btn rounded_pill btn_outline_primary'>Primary</button>
+                <button type='button' class='btn rounded_pill btn_outline_secondary'>Secondary</button>
+                <button type='button' class='btn rounded_pill btn_outline_success'>Success</button>
+                <button type='button' class='btn rounded_pill btn_outline_danger'>Danger</button>
+              </div>
+            </div>
+          </div>
+        </div><!--/.col_xl_6 아웃라인 버튼  -->
+      </div><!-- /.row -->
+
+      <div class='row mb_3'>
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>버튼 옵션</h5>
+            <div class='card_body'>
+              <small class='fw_semibold'>버튼 상태</small>
+              <div>
+                <button type='button' class='btn btn_primary'>정상</button>
+                <button type='button' class='btn btn_primary active'>활성화</button>
+                <button type='button' class='btn btn_primary' disabled=''>비활성화</button>
+              </div>
+            </div>
+          </div>
+        </div><!--/.col_xl_6 버튼 옵션  -->
+
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>아이콘이 있는 버튼</h5>
+            <div class='card_body'>
+              <small class='fw_semibold'>기초적인</small>
+              <div>
+                <button type='button' class='btn btn_primary'>
+                  <span class='tf-icons bx bx-pie-chart-alt'></span>&nbsp; 주요한
+                </button>
+                <button type='button' class='btn btn_secondary'>
+                  <span class='tf-icons bx bx-bell'></span>&nbsp; 중고등 학년
+                </button>
+                <button type='button' class='btn rounded_pill btn_primary'>
+                  <span class='tf-icons bx bx-pie-chart-alt'></span>&nbsp; 주요한
+                </button>
+                <button type='button' class='btn rounded_pill btn_secondary'>
+                  <span class='tf-icons bx bx-bell'></span>&nbsp; 중고등 학년
+                </button>
+              </div>
+              <small class='fw_semibold'>아웃라인</small>
+              <div>
+                <button type='button' class='btn btn_outline_primary'>
+                  <span class='tf-icons bx bx-pie-chart-alt'></span>&nbsp; 주요한
+                </button>
+                <button type='button' class='btn btn_outline_secondary'>
+                  <span class='tf-icons bx bx-bell'></span>&nbsp; 중고등 학년
+                </button>
+                <button type='button' class='btn rounded_pill btn_outline_primary'>
+                  <span class='tf-icons bx bx-pie-chart-alt'></span>&nbsp; 주요한
+                </button>
+                <button type='button' class='btn rounded_pill btn_outline_secondary'>
+                  <span class='tf-icons bx bx-bell'></span>&nbsp; 중고등 학년
+                </button>
+              </div>
+            </div>
+            <hr class='m_0'>
+            <div class='card_body'>
+              <small class='fw_semibold'>기초적인</small>
+              <div>
+                <button type='button' class='btn btn_icon btn_primary'>
+                  <span class='tf-icons bx bx-pie-chart-alt'></span>
+                </button>
+                <button type='button' class='btn btn_icon btn_secondary'>
+                  <span class='tf-icons bx bx-bell'></span>
+                </button>
+                <button type='button' class='btn rounded_pill btn_icon btn_primary'>
+                  <span class='tf-icons bx bx-pie-chart-alt'></span>
+                </button>
+                <button type='button' class='btn rounded_pill btn_icon btn_secondary'>
+                  <span class='tf-icons bx bx-bell'></span>
+                </button>
+              </div>
+              <small class='fw_semibold'>아웃라인</small>
+              <div>
+                <button type='button' class='btn btn_icon btn_outline_primary'>
+                  <span class='tf-icons bx bx-pie-chart-alt'></span>
+                </button>
+                <button type='button' class='btn btn_icon btn_outline_secondary'>
+                  <span class='tf-icons bx bx-bell'></span>
+                </button>
+                <button type='button' class='btn rounded_pill btn_icon btn_outline_primary'>
+                  <span class='tf-icons bx bx-pie-chart-alt'></span>
+                </button>
+                <button type='button' class='btn rounded_pill btn_icon btn_outline_secondary'>
+                  <span class='tf-icons bx bx-bell'></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div><!--/.col_xl_6 아이콘 버튼  -->
+      </div><!-- /.row -->
+
+      <div class='row mb_3'>
+        <div class='col_xl_6'>
+          <div class='card mb_4'>
+            <h5 class='card_header'>뱃지</h5>
+            <div class='card_body'>
+              <small class='fw_semibold'>기본</small>
+              <div>
+                <div class='badge bg_primary'>주요한</div>
+                <div class='badge bg_secondary'>주요한</div>
+                <div class='badge bg_success'>주요한</div>
+                <div class='badge bg_danger'>주요한</div>
+              </div>
+              <div>
+                <div class='badge rounded_pill bg_primary'>주요한</div>
+                <div class='badge rounded_pill bg_secondary'>주요한</div>
+                <div class='badge rounded_pill bg_success'>주요한</div>
+                <div class='badge rounded_pill bg_danger'>주요한</div>
+              </div>
+            </div>
+            <hr class='m_0'>
+            <!-- 배지 원형 및 사각형 스타일 /아이콘 -->
+            <div class='card_body'>
+              <small class=' fw_semibold'>배지 원형 및 사각형 스타일 /아이콘</small>
+              <div>
+                <p>
+                  <span class='badge badge_center bg_primary'>1</span>
+                  <span class='badge badge_center bg_secondary'>2</span>
+                  <span class='badge badge_center bg_success'>삼</span>
+                  <span class='badge badge_center bg_danger'>4</span>
+                  <span class='badge badge_center bg_warning'>5</span>
+                  <span class='badge badge_center bg_info'>6</span>
+                </p>
+                <p>
+                  <span class='badge badge_center rounded_pill bg_primary'>1</span>
+                  <span class='badge badge_center rounded_pill bg_secondary'>2</span>
+                  <span class='badge badge_center rounded_pill bg_success'>삼</span>
+                  <span class='badge badge_center rounded_pill bg_danger'>4</span>
+                  <span class='badge badge_center rounded_pill bg_warning'>5</span>
+                  <span class='badge badge_center rounded_pill bg_info'>6</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div><!--/.col_xl_6 배지  -->
+
+        <div class='col_xl_6'>
+          <div class='card'>
+            <div class='card_header'>알림</div>
+            <div class='card_body'>
+              <small class=' fw_semibold'>버튼안에 배지</small>
+              <div>
+                <button type='button' class='btn btn_primary'>
+                  텍스트<span class='badge bg_white text_primary'>4</span>
+                </button>
+                <button type='button' class='btn btn_primary'>
+                  텍스트<span class='badge bg_secondary rounded_pill'>4</span>
+                </button>
+                <button type='button' class='btn btn_outline_primary'>
+                  텍스트<span class='badge bg_primary'>4</span>
+                </button>
+                <button type='button' class='btn btn_outline_secondary'>
+                  텍스트<span class='badge bg_secondary rounded_pill'>4</span>
+                </button>
+              </div>
+            </div>
+            <hr class='m_0'>
+            <div class='card_body'>
+              <small class='fw_semibold'>아이콘위에 알림</small>
+              <div>
+                <button type='button' class='btn btn_secondary text_nowrap'>
+                  배지<span class='badge bg_primary text_white badge_notifications'>12</span>
+                </button>
+                <button type='button' class='btn btn_secondary text_nowrap'>
+                  라벨 배지<span class='badge bg_white text_secondary badge_notifications'>12</span>
+                </button>
+                <button type='button' class='btn btn_secondary text_nowrap'>
+                  알약<span class='badge rounded_pill bg_success text_white badge_notifications'>12</span>
+                </button>
+                <button type='button' class='btn btn_secondary text_nowrap'>
+                  점<span class='badge badge_dot bg_danger badge_notifications'></span>
+                </button>
+              </div>
+              <div>
+                <button type='button' class='btn text_nowrap'>
+                  <span class='tf-icons bx bx-xs bx-envelope'></span>
+                  <span class='badge bg_primary text_white badge_notifications'>6</span>
+                </button>
+                <button type='button' class='btn text_nowrap'>
+                  <span class='tf-icons bx bxl-twitter'></span>
+                  <span class='badge rounded_pill bg_secondary text_white badge_notifications'>5</span>
+                </button>
+                <button type='button' class='btn text_nowrap'>
+                  <span class='tf-icons bx bx-xs bx-bell'></span>
+                  <span class='badge rounded_pill bg_danger text_white badge_notifications'>10</span>
+                </button>
+                <button type='button' class='btn text_nowrap'>
+                  <span class='tf-icons bx bxl-facebook-square'></span>
+                  <span class='badge rounded_pill bg_danger badge_dot badge_notifications'></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div><!--/.col_xl_6 버튼 배지 & 아이콘 배지  -->
+      </div><!-- /.row -->
+
+      <div class='row mb_3'>
+        <div class='col_xl_6'>
+          <div class='card'>
+            <h5 class='card_header'>도트 스타일</h5>
+            <div class='card_body d-sm-flex d_block'>
+              <div class='d_flex align_items_center me_3 mb_3 mb_sm_0'>
+                <span class='badge badge_dot bg_primary mr_1'></span>도트1
+              </div>
+              <div class='d_flex align_items_center me_3 mb_3 mb_sm_0'>
+                <span class='badge badge_dot bg_secondary mr_1'></span>도트2
+              </div>
+              <div class='d_flex align_items_center me_3 mb_3 mb_sm_0'>
+                <span class='badge badge_dot bg_success mr_1'></span>도트3
+              </div>
+              <div class='d_flex align_items_center me_3 mb_3 mb_sm_0'>
+                <span class='badge badge_dot bg_danger mr_1'></span>도트4
+              </div>
+              <div class='d_flex align_items_center me_3 mb_3 mb_sm_0'>
+                <span class='badge badge_dot bg_warning mr_1'></span>도트5
+              </div>
+              <div class='d_flex align_items_center me_3 mb_3 mb_sm_0'>
+                <span class='badge badge_dot bg_info mr_1'></span>도트6
+              </div>
+            </div>
+          </div>
+        </div><!--/.col_xl_6 도트  -->
+      </div><!-- /.row -->
+
+    </div><!-- /.container_in -->
+  </div><!-- /.container -->
+  
+  <div id="footer_nav"></div><!-- /#footer_nav -->
+  
+  <div class='layout_overlay'></div><!-- /.layout_overlay -->
+
+  <div id='loding_wrap'>
+    <div id='loding_spinner' class='d_none loding_spinner_position loding_spinner spinner_border text_light'
+      role='status'>
+      <span class='visually_hidden'>Loading...</span>
+    </div>
+  </div><!-- /#loding_wrap -->
+  
+</body>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+<script defer="defer" src='/admin_cdn/js/common/common.js'></script>
+<script src='/admin_cdn/js/common/document.js'></script>
+<script src='/admin_cdn/js/common/boot.js'></script>
+<!-- slick slider -->
+<script src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+<script src='/admin_cdn/js/common/slick.js'></script>
+
+</html>

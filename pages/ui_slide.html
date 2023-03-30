@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang='kr' id="headers">
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Refactoring</title>
+  <!-- favicon -->
+  <link rel="icon" href="/admin_cdn/img/impactsoft.ico" type="image/x-icon">
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel='stylesheet' href='/admin_cdn/css/common/reset.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/core.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/common/layout.css' />
+  <link rel='stylesheet' href='/admin_cdn/css/component/style.css' />
+  <!-- box-icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- slick.css -->
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' />
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#nav").load("/pages/common/nav.html");  //헤더 인클루드
+      $("#aside").load("/pages/common/aside.html");  //헤더 인클루드
+      $("#footer_nav").load("/pages/common/footer_nav.html");  //푸터부분 인클루드
+    }
+    );
+  </script>
+</head>
+<body>
+
+  <header id="nav"></header><!-- /#header -->
+  <aside id="aside" class='aside'></aside><!-- /#aside -->
+
+  <!-- 
+    슬릭 슬라이드 사용시 주의사항
+    - 슬릭 슬라이드 사용시 아래코드 복사하고 코드 붙여준 후 slick.js에서 복사한 class코드에 있는걸 복사하고 붙인다.
+    붙인 후 클래스명을 바꾸고 html에 복사한 부분도 클래스명을 바꿔줘야한다.
+
+    슬릭 슬라이드 코드 사용법
+    - 아래 <div class='col_12'>안에 자식요소 <div class=''> … </div> 태그까지 복사해서 적용할 코드에 붙여넣기하면 맞는 디자인 적용된다.
+    -class=''에 ''안에는 아래 클래스 등이 있다.
+    ㄴ slick-one-auto
+    ㄴ single-item 
+    ㄴ slick-opacity
+  -->
+  <div class='container'>
+    <div class='container_in'>
+      <h4 class='mb_3'>UI 요소/ 슬라이드</h4>
+
+      <h5 class='pb_1 mb_4'>슬릭슬라이드</h5>
+      <h6>슬라이드 3개만보이기/ 자동플레이/ 1개씩 넘기기</h6>
+      <div class='row mb_5'>
+        <div class='col_12'>
+          <div class='autoplay slick-one-auto'>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img01.jpg' alt='Card image cap'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img02.jpg' alt='Card image cap'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img03.jpg' alt='Card image cap'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img01.jpg' alt='Card image cap'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img02.jpg' alt='Card image cap'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img03.jpg' alt='Card image cap'></div>
+          </div>
+        </div>
+      </div>
+
+      <h5 class='pb_1 mb_4'>화살표없는 슬릭슬라이드</h5>
+      <h6>슬라이드 3개만보이기/ 자동플레이/ 1개씩 넘기기</h6>
+      <div class='row mb_5'>
+        <div class='col_12'>
+          <div class='arrownone slick-one-auto'>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img01.jpg' alt='Card image cap'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img02.jpg' alt='Card image cap'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img03.jpg' alt='Card image cap'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img01.jpg' alt='Card image cap'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img02.jpg' alt='Card image cap'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img03.jpg' alt='Card image cap'></div>
+          </div>
+        </div>
+      </div>
+
+      <h6>슬라이드 1개만보이기/ 1개씩 넘기기</h6>
+      <div class='row mb_5'>
+        <div class='col_12'>
+          <div class='single-item'>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img01.jpg' alt='Card image cap' style='height:150px'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img02.jpg' alt='Card image cap' style='height:150px'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img03.jpg' alt='Card image cap' style='height:150px'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img01.jpg' alt='Card image cap' style='height:150px'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img02.jpg' alt='Card image cap' style='height:150px'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img03.jpg' alt='Card image cap' style='height:150px'></div>
+          </div>
+        </div>
+      </div>
+
+      <h6>슬라이드 3개만보이기에서 1개만 돋보이게 다른건 반투명/ 1개씩 넘기기</h6>
+      <div class='row mb_5'>
+        <div class='col_12'>
+          <div class='slick-opacity center'>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img01.jpg' alt='Card image cap' style='height:150px'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img02.jpg' alt='Card image cap' style='height:150px'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img03.jpg' alt='Card image cap' style='height:150px'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img01.jpg' alt='Card image cap' style='height:150px'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img02.jpg' alt='Card image cap' style='height:150px'></div>
+            <div><img class='card_img' src='/admin_cdn/img/ui_card_img03.jpg' alt='Card image cap' style='height:150px'></div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.container_in -->
+  </div><!-- /.container -->
+
+  <div id="footer_nav"></div><!-- /#footer_nav -->
+  
+  <div class='layout_overlay'></div><!-- /.layout_overlay -->
+
+  <div id='loding_wrap'>
+    <div id='loding_spinner' class='d_none loding_spinner_position loding_spinner spinner_border text_light'
+      role='status'>
+      <span class='visually_hidden'>Loading...</span>
+    </div>
+  </div><!-- /#loding_wrap -->
+  
+</body>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js'></script>
+<script defer="defer" src='/admin_cdn/js/common/common.js'></script>
+<script src='/admin_cdn/js/common/document.js'></script>
+<script src='/admin_cdn/js/common/boot.js'></script>
+<!-- slick slider -->
+<script src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js'></script>
+<script src='/admin_cdn/js/common/slick.js'></script>
+
+</html>
