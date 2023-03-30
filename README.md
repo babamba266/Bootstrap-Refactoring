@@ -1,6 +1,6 @@
 # 📌Refactoring - Bootstrap
-부트스트랩 템플릿을 리팩토링해서 업체마다 제품이 출시될 때마다 템플릿화하여 원하는 방식으로 자유롭게 사용할 수 있도록 제작</br>
-반응형 템플릿형</br>  
+- 부트스트랩 템플릿을 리팩토링해서 업체마다 제품이 출시될 때마다 템플릿화하여 원하는 방식으로 자유롭게 사용할 수 있도록 제작</br>
+- 반응형 템플릿형</br>  
 https://bootstrap-refactoring.netlify.app/pages/index.html
 </br>
 </br>
