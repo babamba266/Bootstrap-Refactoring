@@ -1,6 +1,6 @@
 # 📌Refactoring - Bootstrap  
 부트스트랩 템플릿을 리팩토링해서 고객사에 제품이 출시될 때마다 템플릿화하여 원하는 방식으로 사용할 수 있도록 반응형으로 제작  
-[bootstrap-refactoring]([https://google.com](https://bootstrap-refactoring.netlify.app/pages/index.html) "로 이동!") 
+[bootstrap-refactoring]((https://bootstrap-refactoring.netlify.app/pages/index.html) "사이트로 이동!") 
 </br>
 </br>
 
